@@ -3,7 +3,7 @@
 The web app shows animations for 6 different sorting algorithms, making it easier to understand how each algorithm works and what the differences between them are.
 
 ## Deployed App
-You can play with the deployed app [here](https://razvanborsan.github.io/tsp-visualizer/). The red dots represent cities or provinces; the yellow dot is the current starting point (the origin city mentioned earlier). 
+You can play with the deployed app [here](https://razvanborsan.github.io/tsp-visualizer/).
 
 Preview:
 
