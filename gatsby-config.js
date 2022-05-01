@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
     siteUrl: 'https://razvanborsan.github.io',
-    title: 'algo-website',
+    title: 'sorting-algorithms',
   },
-  pathPrefix: '/algo-website',
+  pathPrefix: '/sorting-algorithms',
   flags: {
     FAST_DEV: true,
     DEV_SSR: true,
