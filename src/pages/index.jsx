@@ -1,18 +1,36 @@
-import * as React from 'react';
-import { Heading, Text, Box } from '@chakra-ui/layout';
+import React, { useState } from 'react';
 
-import * as styles from 'styles/index.module.scss';
+import { Box } from '@chakra-ui/layout';
+import { Button } from '@chakra-ui/react';
 
-export default function Index() {
+import SortPlayer from 'components/SortPlayer';
+import { sortAlgorithms } from 'shared/constants';
+import Layout from '../components/Layout';
+
+export default function SortingsPage() {
+  const [currentAlgorithm, setCurrentAlgorithm] = useState(sortAlgorithms[0]);
+  const [selected, setSelected] = useState('');
+
   return (
-    <Box as="section" className={styles.container}>
-      <Heading as="h2" size="2xl">
-        Hello!
-      </Heading>
-      <Text fontSize="md" className={styles.messageContainer}>
-        My name is Razvan Ionut Borsan and I&apos;m a frontend developer based
-        in Iasi, Romania.
-      </Text>
+    <Layout>
+    <Box as="section">
+      {sortAlgorithms.map((algorithm) => (
+        <Button
+          key={algorithm.key}
+          colorScheme={selected === algorithm.key ? 'blue' : 'teal'}
+          size="sm"
+          marginRight="1rem"
+          onClick={() => {
+            setSelected(algorithm.key);
+            setCurrentAlgorithm(algorithm);
+          }}
+        >
+          {algorithm.name}
+        </Button>
+      ))}
+
+      <SortPlayer algorithm={currentAlgorithm} />
     </Box>
+    </Layout>
   );
 }

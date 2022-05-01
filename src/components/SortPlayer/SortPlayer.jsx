@@ -91,7 +91,7 @@ export default function SortPlayer({ algorithm }) {
           />
         </Box>
 
-        <Flex justify="center" align="center">
+        <Flex justify="center" align="center" height='150px'>
           <PlayerButtonsContainer
             variables={variables}
             handlers={handlers}
@@ -102,7 +102,7 @@ export default function SortPlayer({ algorithm }) {
               Legend
             </Box>
             {algorithm.legend.map((entry) => (
-              <Flex justify="flex-start" align="center">
+              <Flex key={entry.color} justify="flex-start" align="center">
                 <Box
                   style={{
                     backgroundColor: entry.color,
@@ -129,6 +129,5 @@ SortPlayer.propTypes = {
         message: PropTypes.string.isRequired,
       }).isRequired,
     ).isRequired,
-    complexity: PropTypes.string.isRequired,
   }).isRequired,
 };

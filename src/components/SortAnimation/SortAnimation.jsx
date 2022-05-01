@@ -63,7 +63,6 @@ SortAnimation.propTypes = {
   algorithm: PropTypes.shape({
     key: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
-    complexity: PropTypes.string.isRequired,
     sort: PropTypes.func.isRequired,
   }).isRequired,
   startSorting: PropTypes.bool.isRequired,

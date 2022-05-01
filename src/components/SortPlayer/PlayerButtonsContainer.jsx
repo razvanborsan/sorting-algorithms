@@ -17,6 +17,11 @@ import { getPlayIcon, getRandomValues, getSorted } from './variables';
 import * as styles from './SortPlayer.module.scss';
 import { BAR_NUMBER_ACTIONS, SORTED_ARRAY_TYPE } from './constants';
 
+import { config } from "@fortawesome/fontawesome-svg-core"
+import "@fortawesome/fontawesome-svg-core/styles.css"
+
+config.autoAddCss = false
+
 export default function PlayerButtonsContainer({
   variables,
   handlers,
